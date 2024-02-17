@@ -2,7 +2,8 @@ from django.urls import path
 from . import views 
 
 urlpatterns = [
-    path("", views.login, name='login'),
+    path("signup", views.signUp, name='signup'),
     path("redirect", views.redirect, name='redirect'),
-    path("register",views.register, name='register')
+    path("signin",views.signIn, name='signip'),
+    path("<str:token>/main/<str:fname>", views.index, name='index')
 ]
