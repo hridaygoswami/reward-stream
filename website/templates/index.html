@@ -1,0 +1,460 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reward Stream</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="row s-header__inner width-sixteen-col">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="{% static 'images/logo.svg' %}" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+
+                    <ul class="s-header__menu-links">
+                        <!-- <li style="color: transparent;"><a style="color: transparent;" href="about.html">About</a></li>
+                        <li style="color: transparent;"><a style="color: transparent;" href="services.html">Services</a></li>
+                        <li style="color: transparent;"><a style="color: transparent;" href="blog.html">Journal</a></li>
+                        <li style="color: transparent;"><a style="color: transparent;" href="contact.html">Contact</a></li> -->
+                    </ul> <!--s-header__menu-links-->
+
+                    <div class="s-header__contact">
+                        <a href="{% url 'login:signup' %}" class="btn btn--primary s-header__contact-btn">Get Started</a>
+                    </div> <!-- s-header__contact -->
+
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site main content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+            <!-- intro
+            ----------------------------------------------- -->
+            <section id="intro" class="s-intro">
+
+                <div class="row s-intro__content width-sixteen-col">
+
+                    <div class="column lg-12 s-intro__content-inner grid-block">
+
+                        <div class="s-intro__content-text">
+                            <div class="s-intro__content-pretitle text-pretitle">Welcome to, Reward Stream</div>
+                            <h1 class="s-intro__content-title">
+                                Engage, <br>
+                                Earn, <br>
+                                Enjoy <br>
+                            </h1>
+                        </div> <!-- s-intro__content-text -->
+
+                        <div class="s-intro__content-media">
+                            <div class="s-intro__content-media-inner">
+                                <img src="{% static 'images/money.jpg' %}" 
+                                    srcset="{% static 'images/money.jpg' %} 1x, {% static 'images/money.jpg' %} 2x" alt="">
+                                <div class="lines">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div> <!-- s-intro__content-media -->
+
+                        <div class="s-intro__scroll-down">
+                            <a href="#about" class="smoothscroll">
+                                <div class="scroll-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                                        fill="none" stroke="#97b34a" stroke-width="1" stroke-linecap="round"
+                                        stroke-linejoin="round">&lt;!--! Atomicons Free 1.00 by @atisalab License -
+                                        https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons
+                                        --&gt;<polyline points="7 13 12 18 17 13"></polyline>
+                                        <line x1="12" y1="18" x2="12" y2="6"></line>
+                                    </svg>
+                                </div>
+                                <span>Scroll for more</span>
+                            </a>
+                        </div> <!-- s-intro__scroll-down -->
+
+                    </div> <!-- s-intro__content-inner -->
+
+                </div> <!-- s-intro__content -->
+
+            </section> <!-- end s-intro -->
+
+            <!-- about
+            ----------------------------------------------- -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row s-about__content width-sixteen-col">
+                    <div class="column grid-block grid-section-split">
+
+                        <img src="{% static 'images/geometric_shape.svg' %}" alt="" class="s-about__content-imgbg">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">About Us</div>
+                            <h2 class="text-display-title">
+                                Welcome to Reward Stream, where every interaction counts!
+                            </h2>
+                        </div> <!-- end section-header -->
+
+                        <div class="s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                            At Reward Stream, we believe in rewarding you for your time and influence. Our platform is dedicated to creating a
+                            seamless experience where you can earn money simply by engaging with advertisements. We understand the value of your
+                            attention, and we're here to ensure that it's appreciated.
+                            </p>
+
+                            <p class="attention-getter">
+                                But that's not all. We're also passionate about spreading the love through our referral program. Share your unique
+                                referral coupons with friends, and both you and your friend can reap the benefits. It's our way of saying thank you for
+                                helping us grow our community.
+                            </p>
+
+                            <p class="attention-getter">
+                            Join us on Reward Stream and unlock a world of earning potential. Whether you're looking to make some extra cash or
+                            simply enjoy discovering new products and services, we've got you covered. Start earning, start sharing, and start
+                            enjoying the rewards today!
+                            </p>
+                        </div> <!-- end s-about__content-main -->
+
+                        
+
+                    </div> <!-- content-inner -->
+                </div>
+
+            </section> <!-- end s-about -->
+
+            <!-- expertise
+            ----------------------------------------------- -->
+            <section id="expertise" class="s-expertise">
+
+                <div class="row s-expertise__content width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Reward Stream</div>
+                            <h2 class="text-display-title">
+                                Why Choose us?
+                            </h2>
+
+                            <p class="lead">
+                                Reward Stream serves as a doorway to limitless earning potential in addition to being a platform. We think it's
+                                appropriate to give you credit for your time and influence. For this reason, we've developed an area where you can
+                                easily make money by interacting with adverts and telling others about your experiences. 
+                            </p>
+                        </div> <!-- end section-header -->
+
+                        <div class="s-expertise__content-main grid-section-split__primary">
+
+                            <div class="grid-list-items list-items show-ctr">
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Earn Money Effortlessly</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                            At Reward Stream, we make earning money as simple as possible. With our seamless platform, you can effortlessly
+                                            accumulate credits by engaging with advertisements. Turn your spare time into valuable rewards without any hassle.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Transparent and Secure</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                        ransparency and security are at the core of our platform. We prioritize the privacy and safety of our users, ensuring
+                                        that your personal information is protected at all times. With clear terms and conditions, you can trust that your
+                                        interactions with Reward Stream are honest and secure.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Community and Support</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                            oin a vibrant community of like-minded individuals who are all passionate about earning rewards. Whether you have
+                                            questions, feedback, or just want to connect with others, our dedicated support team is here to assist you every step of
+                                            the way.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Diverse Reward Options</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                            We understand that everyone has different preferences when it comes to rewards. That's why we offer a wide range of
+                                            redemption options, from cash payouts to exciting prizes. Choose the reward that best suits your lifestyle and
+                                            interests.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+
+                            </div> <!-- grid-list-items -->
+                        </div> <!-- end s-expertise__content-main -->
+
+                        <div class="s-expertise__content-btn grid-section-split__bottom">
+                            <a href="services.html" class="btn btn--stroke u-fullwidth">View All Services</a>
+                        </div> <!-- end s-about__content-btn -->
+
+                    </div> <!-- end grid-block-->
+                </div> <!-- end s-expertise__content -->
+
+            </section> <!-- end s-expertise -->
+
+            <!-- clients
+            ----------------------------------------------- -->
+            
+
+        </section> <!-- s-content-->
+
+        <!-- # cta
+        ================================================== -->
+        <section id="cta" class="s-cta">
+
+            <div class="row row-x-center text-center">
+                <div class="column xl-8 lg-12">
+
+                    <div class="s-cta__content">
+                        <h2 class="text-display-title">
+                            Get started with us today.
+                        </h2>
+                        <p class="lead">
+                        Ready to embark on your journey to earning rewards effortlessly? Getting started with Reward Stream is quick and easy!
+                        </p>
+                        <a href="{% url 'login:signup' %}" class="btn btn--primary">Get Started</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section> <!-- end s-cta -->
+
+        <!-- # journal
+        ================================================== -->
+        <!-- This is going to be ad section -->
+        <section id="journal" class="s-journal">
+
+            <div class="row s-journal__content width-sixteen-col">
+                <div class="column xl-12 grid-block">
+
+                    <div class="grid-full section-header text-center">
+                        <div class="text-pretitle">Recent Articles</div>
+                        <h2 class="text-display-title">
+                            Latest articles from my blog.
+                        </h2>
+                    </div> <!-- end section-header -->
+
+                    <div class="grid-full s-journal__content-main grid-list-items">
+
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="https://www.dreamhost.com/r.cgi?287326">Sponsored</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="https://www.dreamhost.com/r.cgi?287326">Need Web
+                                        Hosting for Your Websites?</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                    Need hosting for your website? We would highly recommend <a
+                                        href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
+                                    Enjoy 100% in-house support, guaranteed performance and uptime, 1-click installs,
+                                    and a super-intuitive control
+                                    panel to make managing your websites and projects easy. <a
+                                        href="https://www.dreamhost.com/r.cgi?287326">Sign up</a> now to get started.
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">Productivity</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">5 Marketing Productivity Apps for
+                                        Your Team</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                    Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut
+                                    asperiores
+                                    sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi
+                                    ut
+                                    magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim
+                                    suscipit.
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">SEO</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">7 SEO Factors to Consider for Better
+                                        Website Ranking</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                    Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut
+                                    asperiores
+                                    sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi
+                                    ut
+                                    magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim
+                                    suscipit.
+                                </p>
+                            </div>
+                        </div> <!-- end blog card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">Productivity</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">5 Effective Web Design Principles</a>
+                                </h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ullam et laborum
+                                    aperiam.
+                                    Dignissimos quae voluptatibus ullam esse sapiente fugiat, rerum labore cupiditate
+                                    obcaecati
+                                    dolore necessitatibus id magni rem officia dolor nam sit laudantium. Quo eaque
+                                    eveniet quibusdam unde.
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+
+                    </div> <!-- end grid-list-items -->
+
+                </div> <!-- end grid-block-->
+            </div> <!-- end s-journal__content -->
+
+        </section> <!-- end s-journal -->
+
+
+        <!-- # footer 
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row s-footer__content">
+                <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
+                    <h3>About Reward Stream</h3>
+                    <p>
+                        At Reward Stream, we believe in rewarding you for your time and influence. Our platform is dedicated to creating a
+                        seamless experience where you can earn money simply by engaging with advertisements while various games. We understand the value of your
+                        attention, and we're here to ensure that it's appreciated.
+                    </p>
+                </div>
+                <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
+                </div>
+                <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter">
+                    <h3>Newsletter</h3>
+
+                    <div class="subscribe-form">
+                        <form id="mc-form" class="mc-form">
+                            <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center"
+                                placeholder="Your Email Address"
+                                title="The domain portion of the email address is invalid (the portion after the @)."
+                                pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                                required>
+                            <input type="submit" name="subscribe" value="Subscribe"
+                                class="btn btn--primary btn--small u-fullwidth">
+                            <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
+                            <div class="mc-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                       
+                    </ul> <!-- end s-footer__social -->
+                </div>
+                
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none"
+                            stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+                            Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0)
+                            Copyright 2021 Atomicons --&gt;<polyline points="17 11 12 6 7 11"></polyline>
+                            <line x1="12" y1="18" x2="12" y2="6"></line>
+                        </svg>
+                    </a>
+                </div> <!-- end ss-go-top -->
+            </div>
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

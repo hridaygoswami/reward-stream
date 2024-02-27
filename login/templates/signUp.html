@@ -1,50 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-</head>
-<body>
-    <h1>Registration</h1>
-    <form action="{% url 'redirect' %}" method="post">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td><label for="fname">Full Name</label></td>
-                <td><input type="text" name="fname" id="fname" placeholder="Full Name"></td>
-            </tr>
-            <tr>
-                <td><label for="age">Age</label></td>
-                <td><input type="number" name="age" id="age" placeholder="Age" min="18"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email</label></td>
-                <td><input type="email" name="email" id="email" placeholder="Email"></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="password">Password</label>
-                </td>
-                <td><input type="password" name="password" id="password" placeholder="Password"></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="cPassword">Confirm Password</label>
-                </td>
-                <td>
-                    <input type="password" name="cPassword" id="cPassword" placeholder="Confirm Password">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <center>
-                        <input type="submit" value="Register!">
-                        <input type="reset" value="Clear!">
-                    </center>
-                </td>
-            </tr>
-        </table>
-    </form>
-</body>
-</html>
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+<!-- Sign up form -->
+<section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                <form method="post" class="register-form" id="register-form" action="{% url 'login:redirect' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" name="pass" id="pass" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input type="password" name="cPassword" id="re_pass" placeholder="Confirm password" />
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                            statements in <a href="#" class="term-service">Terms of service</a></label>
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                    </div>
+                </form>
+            </div>`
+            <div class="signup-image">
+                <figure><img src="{% static 'images/signup-image.jpg' %}" alt="sing up image"></figure>
+                <a href="{% url 'login:signin' %}" class="signup-image-link">I am already member</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
