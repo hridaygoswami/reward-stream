@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     "login",
     "apis",
-    "website"
+    "website",
+    "games"
 ]
 
 MIDDLEWARE = [
