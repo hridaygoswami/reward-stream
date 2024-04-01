@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reward Stream - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <header class="header">
+        <div class="header-content responsive-wrapper">
+            <div class="header-logo">
+                <a href="#">
+                    <div>
+                        <!-- <img src="https://assets.codepen.io/285131/untitled-ui-icon.svg" /> -->
+                        <img src="./images/logo.png" id="header-logo">
+                    </div>
+                    <!-- <img src="https://assets.codepen.io/285131/untitled-ui.svg" /> -->
+                </a>
+            </div>
+            <div class="header-navigation">
+                <nav class="header-navigation-links">
+                    <a href="#"> Home </a>
+                    <a href="#"> Dashboard </a>
+                    <!-- <a href="#"> Projects </a>
+				<a href="#"> Tasks </a>
+				<a href="#"> Reporting </a>
+				<a href="#"> Users </a> -->
+                </nav>
+                <div class="header-navigation-actions">
+                    <a href="#" class="button">
+                        <i class="ph-lightning-bold"></i>
+                        <!-- <img class="reward_logo" src="./images/reward_stream_logo-removebg-preview.png" alt=""> -->
+                        <span>Your Rewards</span>
+                    </a>
+                    <a href="#" class="icon-button">
+                        <i class="ph-gear-bold"></i>
+                    </a>
+                    <a href="#" class="icon-button">
+                        <i class="ph-bell-bold"></i>
+                    </a>
+                    <a href="#" class="avatar">
+                        <img src="https://assets.codepen.io/285131/hat-man.png" alt="" />
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="button">
+                <i class="ph-list-bold"></i>
+                <span>Menu</span>
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="responsive-wrapper">
+            <div class="main-header">
+                <h1>Hello, {{ user.username }}</h1>
+                <div class="search">
+                    <!-- <input type="text" placeholder="Search" />
+					<button type="submit">
+						<i class="ph-magnifying-glass-bold"></i>
+					</button> -->
+                </div>
+            </div>
+            <div class="horizontal-tabs">
+                <a href="#" class="active">Profile</a>
+                <a href='{% url "Dashboard_index" %}'>Start Earning</a>
+                <a href="#">Surveys</a>
+                <a href="#">Password</a>
+                <a href="#">Withdrawal</a>
+            </div>
+            <div class="content-header">
+                <div class="content-header-intro">
+                    <h2>Hello, Hriday</h2>
+                    <p>Profile Section</p>
+                </div>
+                <div class="content-header-actions">
+                    <a href="#" class="button">
+                        <i class="ph-faders-bold"></i>
+                        <span>Filters</span>
+                    </a>
+                    <a href="#" class="button">
+                        <!-- <i class="ph-plus-bold"></i>
+                        <span>Request Games</span> -->
+                    </a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-panel">
+                    <div class="vertical-tabs">
+                        <a href="#" class="active">Main</a>
+                        <a href="#">Details</a>
+                        <a href="#">Total Earnings</a>
+                        <a href="#">Daily Surveys</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <iframe src="../dark-uibank-dashboard-concept/dark-uibank-dashboard-concept/dist/index.html"
+                    style="height: 133vh; width: 62vw;"
+                    frameborder="0"></iframe>
+                    <!-- <div class="card-grid">
+                        <article class="card">
+                            <div class="card-header">
+                                <div>
+                                    <span><img src="./images/stacker.png" /></span>
+                                    <h3>Stacker</h3>
+                                </div>
+                                <label class="toggle">
+								<input type="checkbox" checked>
+								<span></span>
+							</label>
+                            </div>
+                            <div class="card-body">
+                                <p>Stack up blocks.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">
+                                    Win 50<i class="ph-lightning-bold"></i>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-header">
+                                <div>
+                                    <span><img src="./images/cube.png" /></span>
+                                    <h3>Cube</h3>
+                                </div>
+                                <label class="toggle">
+								<input type="checkbox" checked>
+								<span></span>
+							</label>
+                            </div>
+                            <div class="card-body">
+                                <p>There are 43 quintillion solutions to solve it.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">
+                                    Win 50<i class="ph-lightning-bold"></i>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-header">
+                                <div>
+                                    <span><img src="./images/tic_tac_toe.png" /></span>
+                                    <h3>Tic Tac Toe</h3>
+                                </div>
+                                <label class="toggle">
+								<input type="checkbox" checked>
+								<span></span>
+							</label>
+                            </div>
+                            <div class="card-body">
+                                <p>Easy win.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">
+                                    Win 1,000<i class="ph-lightning-bold"></i>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-header">
+                                <div>
+                                    <span><img src="./images/video.png" /></span>
+                                    <h3>Earn by Watching Videos</h3>
+                                </div>
+                                <label class="toggle">
+													<input type="checkbox" checked>
+													<span></span>
+												</label>
+                            </div>
+                            <div class="card-body">
+                                <p>More Watching = More Earning.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Win 50<i class="ph-lightning-bold"></i>
+
+                                </a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-header">
+                                <div>
+                                    <span><img src="./images/youtube.png" /></span>
+                                    <h3>Earn By Subscribing Youtube Channel</h3>
+                                </div>
+                                <label class="toggle">
+													<input type="checkbox" checked>
+													<span></span>
+												</label>
+                            </div>
+                            <div class="card-body">
+                                <p>1 Subscribe = 1 Prayer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Win 50<i class="ph-lightning-bold"></i>
+
+                                </a>
+                            </div>
+                        </article>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- partial -->
+    <script src='https://unpkg.com/phosphor-icons'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
