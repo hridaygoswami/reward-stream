@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/dashboard/'
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 SITE_ID = 1

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% load static %}
+			{% block body %}
+			<div class="content-header">
+				<div class="content-header-intro">
+					<h2>Avaliable Games</h2>
+					<p>Play games to earn variety of awards from Reward Stream.</p>
+				</div>
+				<div class="content-header-actions">
+					<a href="#" class="button">
+						<i class="ph-faders-bold"></i>
+						<span>Filters</span>
+					</a>
+					<a href="#" class="button">
+						<i class="ph-plus-bold"></i>
+						<span>Request Games</span>
+					</a>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content-panel">
+					<div class="vertical-tabs">
+						<a href="{% url 'dashboard:Dashboard_earning' %}">View all</a>
+						<a href="{% url 'dashboard:Dashboard_games' %}">Games</a>
+						<a href="{% url 'dashboard:Dashboard_simple_earning' %}">Simple Earning</a>
+						<a href="{% url 'dashboard:Dashboard_mega_rewards' %}" class="active">Mega Rewards</a>
+						<a href="{% url 'dashboard:Dashboard_terms_conditions' %}">Terms & Conditions</a>
+					</div>
+				</div>
+				<div class="content-main">
+					<div class="card-grid">
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="{% static 'images/tic_tac_toe.png' %}" /></span>
+									<h3>Tic Tac Toe</h3>
+								</div>
+								<!-- <label class="toggle">
+								<input type="checkbox" checked>
+								<span></span>
+							</label> -->
+							</div>
+							<div class="card-body">
+								<p>Easy win.</p>
+							</div>
+							<div class="card-footer">
+								<a href="{% url 'games:Tic_tac_toe' %}">
+									Win  1,000<i class="ph-lightning-bold"></i>
+								</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		{% endblock %}

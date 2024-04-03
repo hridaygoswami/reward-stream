@@ -20,75 +20,15 @@
 			<div class="content">
 				<div class="content-panel">
 					<div class="vertical-tabs">
-						<a href="{% url 'dashboard:Dashboard_earning' %}" class="active">View all</a>
+						<a href="{% url 'dashboard:Dashboard_earning' %}">View all</a>
 						<a href="{% url 'dashboard:Dashboard_games' %}">Games</a>
-						<a href="{% url 'dashboard:Dashboard_simple_earning' %}">Simple Earning</a>
+						<a href="{% url 'dashboard:Dashboard_simple_earning' %}" class="active">Simple Earning</a>
 						<a href="{% url 'dashboard:Dashboard_mega_rewards' %}">Mega Rewards</a>
 						<a href="{% url 'dashboard:Dashboard_terms_conditions' %}">Terms & Conditions</a>
 					</div>
 				</div>
 				<div class="content-main">
 					<div class="card-grid">
-						<article class="card">
-							<div class="card-header">
-								<div>
-									<span><img src="{% static './images/stacker.png' %}" /></span>
-									<h3>Stacker</h3>
-								</div>
-								<!-- <label class="toggle">
-								<input type="checkbox" checked>
-								<span></span>
-							</label> -->
-							</div>
-							<div class="card-body">
-								<p>Stack up blocks.</p>
-							</div>
-							<div class="card-footer">
-								<a href="{% url 'games:Stacker' %}">
-									Win 50<i class="ph-lightning-bold"></i>
-								</a>
-							</div>
-						</article>
-						<article class="card">
-							<div class="card-header">
-								<div>
-									<span><img src="{% static './images/cube.png' %}" /></span>
-									<h3>Cube</h3>
-								</div>
-								<!-- <label class="toggle">
-								<input type="checkbox" checked>
-								<span></span>
-							</label> -->
-							</div>
-							<div class="card-body">
-								<p>There are 43 quintillion solutions to solve it.</p>
-							</div>
-							<div class="card-footer">
-								<a href="{% url 'games:Cube' %}">
-									Win  50<i class="ph-lightning-bold"></i>
-								</a>
-							</div>
-						</article>
-						<article class="card">
-							<div class="card-header">
-								<div>
-									<span><img src="{% static 'images/tic_tac_toe.png' %}" /></span>
-									<h3>Tic Tac Toe</h3>
-								</div>
-								<!-- <label class="toggle">
-								<input type="checkbox" checked>
-								<span></span>
-							</label> -->
-							</div>
-							<div class="card-body">
-								<p>Easy win.</p>
-							</div>
-							<div class="card-footer">
-								<a href="{% url 'games:Tic_tac_toe' %}">
-									Win  1,000<i class="ph-lightning-bold"></i>
-								</a>
-							</div>
-						</article>
 						<article class="card">
 							<div class="card-header">
 								<div>

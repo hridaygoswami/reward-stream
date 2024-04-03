@@ -18,7 +18,7 @@
 				<a href="#">
 					<div>
 						<!-- <img src="https://assets.codepen.io/285131/untitled-ui-icon.svg" /> -->
-						<img src="./images/logo.png" id="header-logo">
+						<img src="{% static 'images/logo.png' %}" id="header-logo">
 					</div>
 					<!-- <img src="https://assets.codepen.io/285131/untitled-ui.svg" /> -->
 				</a>
@@ -55,12 +55,44 @@
 			</a>
 		</div>
 	</header>
-    {% block body %}
-	{% endblock %}
-	<!-- partial -->
+	<main class="main">
+		<div class="responsive-wrapper">
+			<div class="main-header">
+				<h1>Start Earning Today {{user}}</h1>
+				<div class="search">
+					<!-- <input type="text" placeholder="Search" />
+					<button type="submit">
+						<i class="ph-magnifying-glass-bold"></i>
+					</button> -->
+				</div>
+			</div>
+			<div class="horizontal-tabs">
+				<a id="profile" href="{% url 'dashboard:Dashboard_index' %}">Profile</a>
+				<a id="earning" href="{% url 'dashboard:Dashboard_earning' %}">Start Earning</a>
+				<a id="surveys" href="{% url 'dashboard:Dashboard_surveys' %}">Surveys</a>
+				<a id="password" href="{% url 'dashboard:Dashboard_password' %}">Password</a>
+				<a id="withdrawal" href="{% url 'dashboard:Dashboard_withdrawal' %}">Withdrawal</a>
+			</div>
+
+            {% block body %}
+
+            {% endblock %}
+
+        </div>
+	</main>
+    <!-- partial -->
 	<script src='https://unpkg.com/phosphor-icons'></script>
 	<script src="{% static 'js/script.js' %}"></script>
-
+	<script>
+		let currentUrl = window.location.href.split("/")[4]
+		if(currentUrl == "") {
+			document.getElementById("profile").className = "active"
+		} else {
+			document.getElementById(currentUrl).className = "active"
+		}
+		// console.log(document.getElementById("profile").className)
+		// console.log(currentUrl)
+</script>
 </body>
 
 </html>
